@@ -4,6 +4,7 @@ Written in Ruby 2.0
 To Process an event:
 
 my_event = EventManager.new "event_name", "my_csv.csv", "my_form.erb"
+
 my_event.main
 
 This will create a directory named "event_name".
