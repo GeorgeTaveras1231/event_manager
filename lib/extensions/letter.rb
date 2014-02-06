@@ -5,8 +5,7 @@ class EventManager
 
 	def create_form_letter row
 		name = EventManager.fix_name(row[:first_name])
-		zipcode = row[:zipcode]
-		zipcode = EventManager.clean_zipcode(zipcode)
+		zipcode = EventManager.clean_zipcode(row[:zipcode])
 		legislators = EventManager.legislators_by_zipcode(zipcode)
 		@erb_template.result(binding)
 	end
